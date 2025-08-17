@@ -1,0 +1,23 @@
+#!/bin/bash
+
+hypr_command() {
+  hyprctl dispatch "$1" &&
+  hyprctl dispatch submap reset
+}
+ 
+normal_command() {
+  hyprctl dispatcher exec "$1" &&
+  hyprctl dispatch submap reset
+}
+
+echo "$2"
+case "$1"  in 
+  -n)
+    shift
+    normal_command "$@"
+    ;;
+  -h)
+    shift
+    hypr_command "$@"
+    ;;
+esac

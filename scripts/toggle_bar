@@ -1,0 +1,20 @@
+#!/bin/bash
+# bound to SUPER+SPACE
+toggle() {
+pkill -f "$1" || waybar -b "$1" -c ~/.config/waybar/"$1".jsonc -s ~/.config/waybar/style.css
+# if pgrep -f "$1" > /dev/null; then
+#   # Kill waybar if it's running
+#   pkill -f "$1"
+#   # echo "Waybar killed."
+# else
+#   # Start waybar if it's not running
+#   waybar -b "$1" -c ~/.config/waybar/"$1".jsonc -s ~/.config/waybar/style.css &
+#   # echo "Waybar started."
+# fi
+}
+
+# Check if waybar is running
+case "$1" in
+  -b) toggle big_bar;;
+  -s) toggle small_bar;;
+esac

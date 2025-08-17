@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cat /home/mike/.config/hypr/scripts/current_config.txt
