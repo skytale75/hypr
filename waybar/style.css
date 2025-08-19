@@ -283,7 +283,8 @@ label:focus {
 }
 
 #mpd {
-    background-color: #66cc99;
+    font-size: 1.2rem;
+    background-color: #ffffff;
     color: #2a5c45;
 }
 

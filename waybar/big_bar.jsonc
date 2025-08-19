@@ -12,7 +12,7 @@
         "hyprland/workspaces",
     ],
     "modules-center": [
-        "mpris"
+        "mpd"
     ],
     "modules-right": [
         "clock"
@@ -30,20 +30,22 @@
     },
     "all-outputs": false // recommended
   },
-"mpris": {
-	"format": "DEFAULT: {player_icon} {dynamic}",
-	"format-paused": "DEFAULT: {status_icon} <i>{dynamic}</i>",
-	"player-icons": {
-		"default": "▶",
-		"mpv": "🎵"
-	},
-	"status-icons": {
-		"paused": "⏸"
-	},
-	// "ignored-players": ["firefox"]
+// "mpris": {
+// 	"format": "DEFAULT: {player_icon} {dynamic}",
+// 	"format-paused": "DEFAULT: {status_icon} <i>{dynamic}</i>",
+// 	"player-icons": {
+// 		"default": "▶",
+// 		"mpv": "🎵"
+// 	},
+// 	"status-icons": {
+// 		"paused": "⏸"
+// 	},
+// 	// "ignored-players": ["firefox"]
 },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+        "port": 6601,
+        "server": "localhost",
         "format-disconnected": "Disconnected ",
         "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
         "unknown-tag": "N/A",
