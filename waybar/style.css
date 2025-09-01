@@ -284,8 +284,8 @@ label:focus {
 
 #mpd {
     font-size: 1.2rem;
-    background-color: #ffffff;
-    color: #2a5c45;
+    background-color: rgba(10, 10, 10, 0.5);
+    color: rgba(20, 230, 100, 1);
 }
 
 #mpd.disconnected {

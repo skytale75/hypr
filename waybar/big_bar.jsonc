@@ -41,9 +41,9 @@
 // 		"paused": "⏸"
 // 	},
 // 	// "ignored-players": ["firefox"]
-},
+// },
     "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+        "format": "{stateIcon} {artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ ",
         "port": 6601,
         "server": "localhost",
         "format-disconnected": "Disconnected ",
