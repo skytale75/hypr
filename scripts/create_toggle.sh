@@ -8,6 +8,7 @@ run_special() {
     hyprctl dispatch focusmonitor "HDMI-A-1"
     if ! hyprctl clients | grep -q "$grep_pattern"; then
         eval "$launch_command" &&
+        hyprctl dispatch movetoworkspace special:"$workspace_name" &&
         sleep 1 # Wait a bit for the window to open
     else
         hyprctl dispatch togglespecialworkspace "$workspace_name" &&
@@ -23,7 +24,7 @@ case "$1" in
         run_special "class: live_server" "google-chrome-stable --class=live_server" "live_server"
         ;;
     -notes)
-        run_special "title: notes" "ghostty --title='notes' -e nvim /home/mike/notes/index.norg" "notes"
+        run_special "title: notes" "ghostty --title='notes' -e nvim /home/mike/vimwiki/index.wiki" "notes"
         ;;
     -email)
         run_special "class: org.gnome.Evolution" "evolution" "email"
