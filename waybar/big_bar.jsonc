@@ -1,115 +1,180 @@
-// -*- mode: jsonc -*-
 {
-    // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "reload_style_on_change": true,
-    "output": "HDMI-A-1",
-    "layer": "bottom",
-    "height": 30, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
-    // Choose the order of the modules
-    "modules-left": [
-        "hyprland/workspaces",
-    ],
-    "modules-center": [
-        "mpd"
-    ],
-    "modules-right": [
-        "clock"
-    ],
- "hyprland/workspaces": {
+  "reload_style_on_change": true,
+  "output": "HDMI-A-1",
+  // "layer": "top",
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": ["idle_inhibitor", "mpd", "clock"],
+
+  "clock": {
+    "format": "{:%a, %b %e | %I:%M}",
+  },
+  "cpu": {
+    "format": "CPU: {usage}%",
+    "tooltip": false,
+  },
+  "memory": {
+    "format": "Mem: {used}GiB",
+  },
+  "disk": {
+    "interval": 60,
+    "path": "/",
+    "format": "Disk: {free}",
+  },
+  "idle_inhibitor": {
+    "tooltip": false,
+    "format": "{icon}",
+    "start-activated": false,
+    "format-icons": {
+      "activated": " ",
+      "deactivated": " ",
+    },
+  },
+  "hyprland/window": {
+    "format": "👉 {}",
+    "rewrite": {
+      "(.*) — Mozilla Firefox": "🌎 $1",
+      "(.*) - fish": "> [$1]",
+    },
+    "separate-outputs": true,
+  },
+  "mpd": {
+    // "format": "{stateIcon}    {artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ ",
+    "format": "{stateIcon}    {artist} - {title}",
+    "port": 6601,
+    "server": "localhost",
+    "format-disconnected": "Disconnected ",
+    "on-click": "/usr/bin/playerctl play-pause",
+    "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+    "unknown-tag": "N/A",
+    "interval": 5,
+    "consume-icons": {
+      "on": " ",
+    },
+    "random-icons": {
+      "off": "<span color=\"#f53c3c\"></span> ",
+      "on": " ",
+    },
+    "repeat-icons": {
+      "on": " ",
+    },
+    "single-icons": {
+      "on": "1 ",
+    },
+    "state-icons": {
+      "paused": "",
+      "playing": "",
+    },
+    "tooltip-format": "{album} - ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ ",
+    "tooltip-format-disconnected": "MPD (disconnected)",
+  },
+  "pulseaudio": {
+    // "scroll-step": 1, // %, can be a float
+    "format": "{volume}% {icon} {format_source}",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": " {format_source}",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""],
+    },
+    "on-click": "pavucontrol",
+  },
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15,
+    },
+    "format": "Bat: {capacity}% {icon} {time}",
+    "format-plugged": "{capacity}% ",
+    "format-alt": "Bat {capacity}%",
+    "format-time": "{H}:{M}",
+    "format-icons": ["", "", "", "", ""],
+  },
+  "network": {
+    "format": "Online",
+    "format-disconnected": "Disconnected ⚠",
+  },
+  "ext/workspaces": {
+    "format": "{icon}",
+    "ignore-hidden": false,
+    "on-click": "activate",
+    "sort-by-id": true,
+  },
+  "hyprland/workspaces": {
     "format": "{name} {icon}",
+    "active-only": false,
+    "show-special": true,
+    "persistent-workspaces": {
+      "HDMI-A-1": [1, 3, 5, 7, 9],
+    },
     "format-icons": {
       "1": "\uf015",
       "2": "\uea85",
       "urgent": "",
-      "active": "", // focused workspace on current monitor 
+      "active": "", // focused workspace on current monitor
       "visible": "", // focused workspace on other monitors
       "default": "",
-      "empty": "" // persistent (created by this plugin)
+      "empty": "", // persistent (created by this plugin)
     },
-    "all-outputs": false // recommended
+    "all-outputs": false, // recommended
   },
-// "mpris": {
-// 	"format": "DEFAULT: {player_icon} {dynamic}",
-// 	"format-paused": "DEFAULT: {status_icon} <i>{dynamic}</i>",
-// 	"player-icons": {
-// 		"default": "▶",
-// 		"mpv": "🎵"
-// 	},
-// 	"status-icons": {
-// 		"paused": "⏸"
-// 	},
-// 	// "ignored-players": ["firefox"]
-// },
-    "mpd": {
-        "format": "{stateIcon} {artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ ",
-        "port": 6601,
-        "server": "localhost",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 5,
-        "consume-icons": {
-            "on": " "
-        },
-        "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
+  // "hyprland/workspaces": {
+  //   "format": "<sub>{icon}</sub>\n{windows}",
+  //   "format-window-separator": "\n",
+  //   "window-rewrite-default": "",
+  //   "window-rewrite": {
+  //     "title<.*youtube.*>": "", // Windows whose titles contain "youtube"
+  //     "class<firefox>": "", // Windows whose classes are "firefox"
+  //     "class<firefox> title<.*github.*>": "", // Windows whose class is "firefox" and title contains "github". Note that "class" always comes first.
+  //     "foot": "", // Windows that contain "foot" in either class or title. For optimization reasons, it will only match against a title if at least one other window explicitly matches against a title.
+  //     "code": "󰨞",
+  //   },
+  // },
+  "dwl/window#layout": {
+    "format": "[{layout}]",
+  },
+  // "dwl/window#title": {
+  //   "format": "{title}",
+  // },
+  "custom/sep": {
+    "format": "|",
+    "interval": 0,
+  },
+  "custom/keymode": {
+    "exec": "~/.config/mango/waybar/keymode.sh",
+    "return-type": "json",
+    "format": "{text}",
+    "interval": 1,
+  },
+  "custom/current_layout": {
+    "exec": "~/.config/mango/waybar/current_layout.sh",
+    "return-type": "json",
+    "format": "{text}",
+    "tooltip": false,
+    "menu": "on-click",
+    "menu-file": "~/.config/mango/waybar/LayoutMenu.xml",
+    "menu-actions": {
+      "scroller": "mmsg -l S",
+      "verticle_scroller": "mmsg -l VS",
+      "tile": "mmsg -l T",
+      "center_tile": "mmsg -l CT",
+      "monocle": "mmsg -l M",
+      "vertical_scroller": "mmsg -l VS",
+      "right_tile": "mmsg -l RT",
+      "deck": "mmsg -l K",
+      "vertical_deck": "mmsg -l VK",
+      "grid": "mmsg -l G",
+      "vertical_grid": "mmsg -l VG",
     },
-    "tray": {
-        // "icon-size": 21,
-        "spacing": 10,
-        // "icons": {
-        //   "blueman": "bluetooth",
-        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
-        // }
-    },
-    "clock": {
-        // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
-    },
-    "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false
-    },
-    "memory": {
-        "format": "{}% "
-    },
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
-    },
-    "custom/power": {
-        "format" : "⏻ ",
-		"tooltip": false,
-		"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-		"menu-actions": {
-			"shutdown": "shutdown",
-			"reboot": "reboot",
-			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
-		}
-    }
+    "interval": 1,
+  },
 }

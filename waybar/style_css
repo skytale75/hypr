@@ -3,15 +3,15 @@
   margin-top: 1px;
   margin-bottom: 1px;
   margin-right: 5px;
-  margin-left: 0px;
+  margin-left: 5px;
   font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
   font-size: 13px;
-  /* border-radius: 10px; */
+  border-radius: 10px;
 }
 
 window#waybar {
-  /* border-radius: 10px; */
-  background-color: #111;
+  border-radius: 10px;
+  background-color: rgba(43, 48, 59, 0);
   /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
   color: #ffffff;
   transition-property: background-color;
@@ -23,65 +23,23 @@ window#waybar.hidden {
   opacity: 0.2;
 }
 
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+*/
+
 window#waybar.termite {
   background-color: #3f3f3f;
 }
 
-window .title {
-  background-color: #000000;
-}
-
-#window {
-  background-color: #222;
-  color: rgba(20, 230, 200, 0.8);
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-window .layout {
-  background-color: #000000;
-  min-width: 70px;
-}
-
-#workspaces {
-  background-color: #111;
-  padding: 2px;
-}
-
-#workspaces button {
-  background-color: #222;
-  color: rgba(20, 230, 200, 0.5);
-  border-radius: 6px;
-}
-
-#workspaces button.empty {
-  background-color: rgba(20, 230, 100, 0.5);
-  color: #000000;
-  font-weight: bold;
-}
-
-#workspaces button.persistent {
-  background-color: rgba(20, 230, 200, 0.5);
-  color: #000000;
-  font-weight: bold;
-}
-
-#workspaces button.special {
-  background-color: transparent;
-  border: 2px solid rgba(20, 130, 200, 0.8);
-  color: rgba(20, 130, 240, 0.8);
-  font-weight: bold;
-}
-
-#workspaces button.active {
-  background-color: rgba(20, 230, 200, 1);
-  color: #000000;
-  font-weight: bold;
-}
-
-#workspaces button.urgent {
-  background-color: #eb4d4b;
-}
+/* window#waybar.chromium { */
+/*     background-color: #000000; */
+/*     border: none; */
+/* } */
 
 button {
   /* Use box-shadow instead of border so the text isn't offset */
@@ -100,6 +58,38 @@ button:hover {
 /* you can set a style on hover for any module like this */
 #pulseaudio:hover {
   background-color: #a37800;
+}
+
+#workspaces button {
+  border-radius: 10px;
+  padding-right: 15px;
+  background-color: black;
+  margin: 2px;
+  padding: 0 15px;
+  color: #ffffff;
+}
+
+#workspaces button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.focused {
+  background-color: red;
+  box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button.active {
+  background: rgba(128, 128, 128, 0.5);
+  box-shadow: inset 0 -3px cyan;
+}
+
+#workspaces button.urgent {
+  background-color: #eb4d4b;
+}
+
+#mode {
+  background-color: #64727d;
+  box-shadow: inset 0 -3px #ffffff;
 }
 
 #clock,
@@ -127,6 +117,9 @@ button:hover {
 #hyprland-workspaces {
   margin: 0 4px;
   border-radius: 10px;
+  /* display: flex; */
+  /* align-items: center; */
+  /* height: 32px; */
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -140,10 +133,7 @@ button:hover {
 }
 
 #clock {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: rgba(20, 230, 200, 1);
-  background-color: transparent;
+  background-color: #64727d;
 }
 
 #mpris {
@@ -264,86 +254,6 @@ label:focus {
   background-color: #ffa000;
 }
 
-#custom-keymode {
-  border-radius: 10px;
-  min-width: 70px;
-  font-weight: bold;
-  padding: 0 10px;
-  border-radius: 0px;
-}
-
-#custom-keymode.default {
-  background-color: rgba(20, 230, 200, 0.1);
-  color: #ffffff;
-}
-
-#custom-keymode.not-default {
-  background-color: yellow;
-  color: black;
-}
-
-#custom-current_layout {
-  min-width: 60px;
-  font-weight: bold;
-  padding: 0 10px;
-  border-radius: 0 10 10 0px;
-}
-
-#custom-current_layout.scroller {
-  background-color: teal;
-  color: white;
-}
-
-menu {
-  border-radius: 10px;
-  background-color: #000000;
-  color: #ffffff;
-}
-
-menuitem {
-  border-radius: 6px;
-}
-
-#custom-current_layout.monocle {
-  background-color: #222;
-  color: rgba(20, 230, 200, 0.8);
-}
-
-#custom-current_layout.r_tile {
-  background-color: purple;
-  color: white;
-}
-
-#custom-current_layout.deck {
-  background-color: brown;
-  color: white;
-}
-
-#custom-current_layout.vertical_deck {
-  background-color: brown;
-  color: white;
-}
-
-#custom-current_layout.vertical_tile {
-  background-color: grey;
-  color: white;
-}
-
-#custom-current_layout.vertical_scroller {
-  background-color: cyan;
-  color: black;
-}
-
-#custom-current_layout.center_tile {
-  background-color: #2980b1;
-  color: black;
-}
-
-#custom-current_layout.tile {
-  background-color: maroon;
-  color: white;
-}
-
 #temperature {
   background-color: #f0932b;
 }
@@ -366,24 +276,18 @@ menuitem {
 }
 
 #idle_inhibitor {
-  background-color: #111;
-  color: rgba(20, 230, 200, 0.8);
+  background-color: #2d3436;
 }
 
 #idle_inhibitor.activated {
-  background-color: #111;
-  color: #eb4d4b;
+  background-color: #ecf0f1;
+  color: #2d3436;
 }
 
 #mpd {
-  font-size: 1rem;
-  min-width: 400px;
+  font-size: 1.2rem;
   background-color: rgba(10, 10, 10, 0.5);
-  color: rgba(20, 230, 200, 1);
-  border: 1px solid rgba(20, 230, 200, 1);
-  border-radius: 6px;
-  padding: 0 5px;
-  margin: 0 5px;
+  color: rgba(20, 230, 100, 1);
 }
 
 #mpd.disconnected {
@@ -391,16 +295,11 @@ menuitem {
 }
 
 #mpd.stopped {
-  color: #000;
-  background-color: transparent;
+  background-color: #90b1b1;
 }
 
 #mpd.paused {
-  background-color: transparent;
-  color: rgba(20, 230, 200, 0.2);
-  border: 1px solid rgba(20, 230, 200, 0.2);
-  border-radius: 6px;
-  padding: 0 5px;
+  background-color: #51a37a;
 }
 
 #language {
