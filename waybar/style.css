@@ -54,7 +54,7 @@ window .layout {
   border-radius: 6px;
 }
 
-#workspaces button.empty {
+#workspaces button.persistent {
   background-color: rgba(20, 230, 100, 0.5);
   color: #000000;
   font-weight: bold;
@@ -206,13 +206,13 @@ label:focus {
 }
 
 #cpu {
-  color: #2ecc71;
-  background-color: #000000;
+  color: rgba(20, 230, 200, 1);
+  background-color: rgb(6, 41, 1);
 }
 
 #memory {
-  color: #9b59b6;
-  background-color: #000000;
+  color: rgba(20, 230, 200, 1);
+  background-color: rgb(41, 1, 3);
 }
 
 #disk {
@@ -232,8 +232,9 @@ label:focus {
 }
 
 #pulseaudio {
-  color: #f1c40f;
-  background-color: #000000;
+  background-color: rgb(61, 50, 2);
+  border-radius: 6px;
+  color: rgba(20, 230, 200, 1);
 }
 
 #pulseaudio.muted {
@@ -353,7 +354,7 @@ menuitem {
 }
 
 #tray {
-  background-color: #2980b9;
+  background-color: rgb(1, 35, 41);
 }
 
 #tray > .passive {

@@ -111,7 +111,7 @@
   },
   "hyprland/workspaces": {
     "format": "{name} {icon}",
-    "active-only": false,
+    "active-only": true,
     "show-special": true,
     "persistent-workspaces": {
       "HDMI-A-1": [1, 3, 5, 7, 9],
