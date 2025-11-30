@@ -1,0 +1,13 @@
+submap = configs
+b, exec, smc -n "kitty --title "binConf" -e tmux && nvim /home/mike/bin/"
+d, exec, smc -n "kitty --title "devConf" -e nvim /home/mike/dev/"
+h, exec, smc -n "kitty --title "hyprConf" -e nvim /home/mike/.config/hypr/"
+f, exec, smc -n "kitty --title "fishConf" -e nvim /home/mike/.config/fish/"
+k, exec, smc -n "kitty --title "kittyConf" -e nvim /home/mike/.config/kitty/"
+m, exec, smc -n "kitty --title "kittyConf" -e nvim /home/mike/.config/mako/config"
+n, exec, smc -n "kitty --title "nvimConf" -e nvim /home/mike/.config/nvim/"
+SHIFT, n, exec, smc -n "kitty --title "ncmpcppConf" -e nvim /home/mike/.config/ncmpcpp/"
+w, exec, smc -n "kitty --title "wayConf" -e nvim /home/mike/.config/hypr/waybar/"
+SUPER, C, submap, reset
+escape, submap, reset
+submap = reset

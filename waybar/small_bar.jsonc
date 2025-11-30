@@ -4,17 +4,26 @@
   "layer": "top",
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["hyprland/window"],
-  "modules-right": ["pulseaudio", "cpu", "memory", "tray"],
+  "modules-right": ["pulseaudio", "memory", "tray"],
 
   "clock": {
     "format-alt": "{:%Y-%m-%d}",
   },
+
+  "custom/sys-drawer": {
+    "format": "{text}",
+    "on-click": "toggle",
+    "drawer": {
+      "children": ["cpu", "memory"],
+    },
+  },
+
   "cpu": {
     "format": "CPU: {usage}%",
     "tooltip": false,
   },
   "memory": {
-    "format": "Mem: {used}GiB",
+    "format": "{used} / {total}",
   },
   "mpd": {
     "format": "{stateIcon} {artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ ",

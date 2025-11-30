@@ -1,0 +1,8 @@
+1 - 9		Change to workspace 1 - 9
+SHIFT + (1-9) 	Move window to workspace
+<- & -> 	Column Resize
+SUPER + <- & ->	Move to monitor
+f 		toggle floating
+SHIFT + <- 	toggle fit
+SHIFT + -> 	fit all to screen
+
