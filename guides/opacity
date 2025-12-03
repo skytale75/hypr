@@ -1,4 +1,3 @@
-submap = opacity
 0, setprop, active, alpha 1.0
 1, setprop, active, alpha 0.1
 2, setprop, active, alpha 0.2
@@ -11,4 +10,3 @@ submap = opacity
 9, setprop, active, alpha 0.9
 o, submap, reset
 escape, submap, reset
-submap = reset

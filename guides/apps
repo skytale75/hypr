@@ -1,8 +1,7 @@
-submap = apps
-q, exec, smc -n qutebrowser
-b, exec, smc -n google-chrome-stable
-i, exec, smc -n inkscape
-k, exec, smc -n krita
+q,  			qutebrowser
+b,  			chrome
+SHIFT, b, 	chrome incognito
+i,  			inkscape
+k,  			krita
 SUPER, A, submap, reset
 escape, submap, reset
-submap = reset

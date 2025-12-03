@@ -1,4 +1,3 @@
-submap = resize
 right, resizeactive, 10 0
 right, centerwindow
 left, resizeactive, -10 0
@@ -16,4 +15,3 @@ k, centerwindow
 j, resizeactive, 0 100
 j, centerwindow
 escape, submap, reset
-submap = reset

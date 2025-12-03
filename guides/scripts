@@ -1,9 +1,9 @@
-submap = scripts
-b, exec, smc -n python3 /home/mike/.config/hypr/scripts/bind_csm.py
-m, exec, smc -n makoctl reload & notify-send "Mako Reloaded"
-k, exec, killall mako
-l, exec, pkill listeners
-s, exec, ~/.config/hypr/listeners/submap_listener.sh
+b,  Update Bind List
+m,  reload mako
+SHIFT, P,  Colorpick New list
+P,  Colorpick Add to list
+k,  kill mako
+l,  kill listeners
+s,  Restart submap listener
 SUPER, S, submap, reset
 escape, submap, reset
-submap = reset

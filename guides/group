@@ -1,5 +1,3 @@
-submap = group
 g, togglegroup
 o, submap, reset
 escape, submap, reset
-submap = reset

@@ -7,8 +7,6 @@ my_list = os.path.expanduser("~/.config/hypr/.bind_list.txt")
 with open(my_list, "w") as f:
     f.write("")
 
-    import subprocess
-
     def send_mako_notification(title, message, app_name=None, icon=None):
         """
         update complete notification
@@ -86,6 +84,36 @@ def search_files_for_strings(start_dir, target_strings):
                     for line_num, line in enumerate(f, 1):
                         for target in target_strings:
                             if line.strip().startswith(target):
+                                # New logic to handle "exec" and "#->"
+                                modified_line = line.strip()
+                                if "#->" in modified_line:
+                                    parts = modified_line.split("#->", 1)
+                                    text_before_arrow = parts[0]
+                                    text_after_arrow = (
+                                        parts[1] if len(parts) > 1 else ""
+                                    )  # The comment text after #->
+
+                                    exec_idx = text_before_arrow.find("exec")
+                                    if exec_idx != -1:
+                                        # Keep everything before "exec" from text_before_arrow
+                                        # and append text_after_arrow (the comment itself)
+                                        # Then strip to clean up any extra spaces
+                                        modified_line = (
+                                            text_before_arrow[:exec_idx]
+                                            + text_after_arrow
+                                        ).strip()
+                                    else:
+                                        # If 'exec' not found, just take text_before_arrow, effectively removing '#->' and content after it
+                                        modified_line = text_before_arrow.strip()
+                                else:
+                                    modified_line = (
+                                        modified_line  # No change if "#->" not present
+                                    )
+
+                                line = (
+                                    modified_line  # Assign the cleaned line to `line`
+                                )
+
                                 if not line.startswith("submap"):
                                     line = str(line.split(" =")[1])
                                 line = line.replace(" , ", "")
@@ -140,7 +168,7 @@ def extract_and_remove_submaps():
                 if lines[j].strip() == "submap = reset":
                     # End of section found.
                     section_indices = range(i, j + 1)
-                    section_content = lines[i : j + 1]
+                    section_content = lines[i + 1 : j]
 
                     # Create the new file for the submap
                     new_file_path = os.path.join(output_dir, submap_name)
@@ -178,4 +206,5 @@ if __name__ == "__main__":
 
     search_files_for_strings(search_directory, search_terms)
     extract_and_remove_submaps()
+    subprocess.run("hyprctl dispatch submap reset", shell=True)
     send_mako_notification("Bind List", "Updated")

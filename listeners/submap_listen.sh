@@ -32,10 +32,6 @@ submap_notify_mako() {
         CLOSE_ID=$(< ~/.config/hypr/listeners/submap_id.txt)
         makoctl dismiss -n "$CLOSE_ID"
         makoctl mode -r $(< mako_layout.txt)
-        # makoctl mode -a "$SUBMAP"
-        DEF_ID=$(notify-send -p -t 0 "$SUBMAP" "mode: default")
-        sleep 2
-        makoctl dismiss -n "$DEF_ID"
     fi
 }
 
