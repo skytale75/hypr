@@ -1,3 +1,6 @@
+s,  Set layout to scrolling
+d,  Set layout to dwindle
+m,  Set layout to master
 1,  View workspace 1
 2,  View workspace 2
 3,  View workspace 3
@@ -8,18 +11,18 @@
 8,  View workspace 8
 9,  View workspace 9
 0,  View workspace 10
-SHIFT, 1,  Move to WS 1
-SHIFT, 2,  Move to WS 2
-SHIFT, 3,  Move to WS 3
-SHIFT, 4,  Move to WS 4
+,XF86Back,  Move to WS 1
+XF86Forward,  Move to WS 2
+Ctrl, minus,  Move to WS 3
+Ctrl, equal,  Move to WS 4
 SHIFT, 5,  Move to WS 5
 SHIFT, 6,  Move to WS 6
 SHIFT, 7,  Move to WS 7
 SHIFT, 8,  Move to WS 8
 SHIFT, 9,  Move to WS 9
 SHIFT, 0,  Move to WS 10
-XF86Back,  Column Shrink
-XF86Forward,  Column Grow
+SUPER, XF86Back,  Column Shrink
+SUPER, XF86Forward,  Column Grow
 SHIFT, f,  Fit All
 SUPER, f,  Toggle Fit
 SUPER, XF86Back,  Move Monitor Left
@@ -27,5 +30,6 @@ SUPER, XF86Forward,  Move Monitor Right
 f, togglefloating
 r, workspace, 3
 r,  Reset View
-XF86HomePage, submap, reset
+XF86Search, submap, reset
+XF86ZoomIn, submap, reset
 escape, submap, reset

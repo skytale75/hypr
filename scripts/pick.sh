@@ -7,14 +7,14 @@ trap 'echo "Exiting..."; exit 1' SIGINT
 function new_file() {
     GET=$(hyprpicker -a -f hex) &&
     if [ $GET != "" ]; then
-        echo "$GET" > $HOME/Documents/colors/$1.txt
+        echo "$GET" > $HOME/Documents/colors/$1.css
     fi
 }
 
 function add_color() {
     GET=$(hyprpicker -a -f hex) &&
     if [ $GET != "" ]; then
-        echo "$GET" >> $HOME/Documents/colors/$1.txt
+        echo "$GET" >> $HOME/Documents/colors/$1.css
     fi
 }
 

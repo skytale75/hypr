@@ -456,3 +456,18 @@ menuitem {
 #privacy-item.audio-out {
   background-color: #0069d4;
 }
+
+#custom-current_layout.dwindle {
+  background-color: #000000;
+  color: #bb96da;
+}
+
+#custom-current_layout.scrolling {
+  background-color: #000000;
+  color: rgba(20, 230, 200, 0.8);
+}
+
+#custom-current_layout.master {
+  background-color: #000000;
+  color: #fab388;
+}

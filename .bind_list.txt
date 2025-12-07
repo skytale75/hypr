@@ -1,3 +1,5 @@
+XF86HomePage,  Follow mouse
+XF86ZoomIn,  Follow mouse
 SUPER SHIFT, SPACE,  Waybar Big
 SUPER SHIFT, P,  Password Manager
 SUPER SHIFT, M,  Mail
@@ -13,21 +15,22 @@ SUPER, P,  Colorpick Add to list
 SUPER Ctrl, P,  Colorpick New list
 SUPER Alt, P,  Colorpick List
 SUPER SHIFT, C, centerwindow
-SUPER, h, layoutmsg, move -col
-SUPER, l, layoutmsg, move +col
-SUPER SHIFT Ctrl, h, focusmonitor, 0
-SUPER SHIFT Ctrl, l, focusmonitor, 1
+SUPER, h, exec, best_keys.sh left
+SUPER, l, exec, best_keys.sh right
+SUPER SHIFT, k, exec, best_keys.sh mvup
+SUPER SHIFT, j, exec, best_keys.sh mvdown
+XF86Back, focusmonitor, 0
+XF86Forward, focusmonitor, 1
 SUPER, k, movefocus, u
 SUPER, j, movefocus, d
 SUPER Ctrl, l, layoutmsg, movewindowto r
 SUPER Ctrl, h, layoutmsg, movewindowto l
 SUPER Ctrl, k, layoutmsg, movewindowto u
 SUPER Ctrl, j, layoutmsg, movewindowto d
-SUPER SHIFT, l, layoutmsg, swapcol r
-SUPER SHIFT, h, layoutmsg, swapcol l
+SUPER SHIFT, l, exec, best_keys.sh mvright
+SUPER SHIFT, h, exec, best_keys.sh mvleft
 SUPER SHIFT Ctrl, b, exec, python3 /home/mike/.config/hypr/scripts/bind_csm.py
 SUPER Ctrl, b,  bind list
-Ctrl, x,  clipboard
 SUPER, mouse_down, workspace, e+1
 SUPER, mouse_up, workspace, e-1
 SUPER, mouse:272, movewindow
@@ -56,6 +59,7 @@ KP_Page_Down, togglespecialworkspace, sti
 KP_Page_Down, exec, resize_center.sh 98% 95%
 XF86Tools, togglespecialworkspace, mpdClient
 XF86Tools, exec, resize_center.sh 95% 90%
+SUPER, XF86Tools, togglespecialworkspace, glavaWS
 XF86Mail, togglespecialworkspace, email
 XF86Mail, exec, resize_center.sh 95% 95%
 SUPER, e, togglespecialworkspace, my_yazi
@@ -76,8 +80,7 @@ SHIFT, KP_Up, movetoworkspace, special:term_util
 SUPER SHIFT, U, togglespecialworkspace, updater
 SUPER, S, submap, scripts
 SUPER, C, submap, configs
-XF86HomePage, submap, workspaces
+XF86Search, submap, workspaces
 SUPER, O, submap, opacity
-SUPER, G, submap, group
 SUPER, A, submap, apps
 SUPER, R, submap, resize

@@ -1,4 +1,5 @@
 q,  			qutebrowser
+g,  			glava
 b,  			chrome
 SHIFT, b, 	chrome incognito
 i,  			inkscape
