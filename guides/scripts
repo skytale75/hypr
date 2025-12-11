@@ -1,7 +1,8 @@
 b,  Update Bind List
 m,  reload mako
-SHIFT, P,  Colorpick New list
-P,  Colorpick Add to list
+i,  Info Files
+e,  Send Email
+p,  Stuff
 k,  kill mako
 l,  kill listeners
 s,  Restart submap listener

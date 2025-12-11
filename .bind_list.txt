@@ -2,7 +2,6 @@ XF86HomePage,  Follow mouse
 XF86ZoomIn,  Follow mouse
 SUPER SHIFT, SPACE,  Waybar Big
 SUPER SHIFT, P,  Password Manager
-SUPER SHIFT, M,  Mail
 SUPER, SPACE,  Waybar Small
 SUPER, Return, layoutmsg, swapwithmaster
 SUPER SHIFT, F, fullscreen
@@ -11,10 +10,18 @@ SUPER, Q, killactive
 SUPER SHIFT, Q,  Exit Script
 SUPER, m,  menu
 SUPER, b,  wallpaper randomizer
-SUPER, P,  Colorpick Add to list
-SUPER Ctrl, P,  Colorpick New list
-SUPER Alt, P,  Colorpick List
 SUPER SHIFT, C, centerwindow
+SUPER, f, togglefloating
+SUPER, 1, workspace, 1
+SUPER, 2, workspace, 2
+SUPER, 3, workspace, 3
+SUPER, 4, workspace, 4
+SUPER, 5, workspace, 5
+SUPER, 6, workspace, 6
+SUPER, 7, workspace, 7
+SUPER, 8, workspace, 8
+SUPER, 9, workspace, 9
+SUPER, 0, workspace, 0
 SUPER, h, exec, best_keys.sh left
 SUPER, l, exec, best_keys.sh right
 SUPER SHIFT, k, exec, best_keys.sh mvup
@@ -79,6 +86,7 @@ KP_Up, exec, resize_center.sh 98% 98%
 SHIFT, KP_Up, movetoworkspace, special:term_util
 SUPER SHIFT, U, togglespecialworkspace, updater
 SUPER, S, submap, scripts
+SUPER, P, submap, colorpick
 SUPER, C, submap, configs
 XF86Search, submap, workspaces
 SUPER, O, submap, opacity

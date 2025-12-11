@@ -4,5 +4,6 @@ b,  			chrome
 SHIFT, b, 	chrome incognito
 i,  			inkscape
 k,  			krita
+y, 			youtube
 SUPER, A, submap, reset
 escape, submap, reset

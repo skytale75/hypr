@@ -1,0 +1,26 @@
+#!/bin/bash
+
+FILE="/home/mike/.wb_status"
+
+toggle_bar() {
+    (pkill -f "$1" && sed -i "/$1/d" "$FILE") || (waybar -b "$1" -c ~/.config/hypr/waybar/"$1".jsonc -s ~/.config/hypr/waybar/style.css & echo "$1" >> "$FILE")
+
+}
+
+restart_bar() {
+    while IFS= read -r line; do
+        /usr/bin/waybar -b "$line" -c ~/.config/hypr/waybar/"$line".jsonc -s ~/.config/hypr/waybar/style.css &
+    done < /home/mike/.wb_status
+}
+
+kill_bar() {
+    /usr/bin/killall waybar && echo "" > /home/mike/.wb_status
+}
+
+case "$1" in
+    -b) toggle_bar big_bar ;;
+    -s) toggle_bar small_bar ;;
+    -r) restart_bar ;;
+    -k) kill_bar ;;
+esac
+

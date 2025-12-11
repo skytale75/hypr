@@ -11,7 +11,8 @@
 
 window#waybar {
   /* border-radius: 10px; */
-  background-color: #111;
+  /* background-color: rgb(128, 128, 128); */
+  background-color: transparent;
   /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
   color: #ffffff;
   transition-property: background-color;
@@ -28,54 +29,56 @@ window#waybar.termite {
 }
 
 window .title {
-  background-color: #000000;
+  background-color: rgb(250, 250, 250);
 }
 
 #window {
-  background-color: #222;
-  color: rgba(20, 230, 200, 0.8);
+  background-color: rgb(78, 81, 111);
+  color: rgb(250, 250, 250);
   padding-left: 10px;
   padding-right: 10px;
 }
 
 window .layout {
-  background-color: #000000;
+  background-color: rgb(250, 250, 250);
   min-width: 70px;
 }
 
 #workspaces {
-  background-color: #111;
-  padding: 2px;
+  background-color: transparent;
+  border: 1px solid rgb(250, 250, 250);
+  border-radius: 4px;
+  padding: 4px;
 }
 
 #workspaces button {
   background-color: #222;
-  color: rgba(20, 230, 200, 0.5);
+  color: rgba(78, 81, 111, 0.5);
   border-radius: 6px;
 }
 
 #workspaces button.persistent {
   background-color: rgba(20, 230, 100, 0.5);
-  color: #000000;
+  color: rgb(250, 250, 250);
   font-weight: bold;
 }
 
 #workspaces button.persistent {
-  background-color: rgba(20, 230, 200, 0.5);
-  color: #000000;
+  background-color: rgba(78, 81, 111, 0.5);
+  color: rgb(250, 250, 250);
   font-weight: bold;
 }
 
 #workspaces button.special {
-  background-color: transparent;
-  border: 2px solid rgba(20, 130, 200, 0.8);
-  color: rgba(20, 130, 240, 0.8);
+  background-color: rgb(65, 99, 105);
+  border: 2px solid rgba(20, 130, 200, 1);
+  color: rgba(211, 212, 220, 1);
   font-weight: bold;
 }
 
 #workspaces button.active {
-  background-color: rgba(20, 230, 200, 1);
-  color: #000000;
+  background-color: rgba(78, 81, 111, 1);
+  color: rgb(250, 250, 250);
   font-weight: bold;
 }
 
@@ -121,6 +124,7 @@ button:hover {
 #mpd {
   padding: 0 10px;
   color: #ffffff;
+  background-color: rgba(78, 81, 111, 1);
 }
 
 #window,
@@ -142,8 +146,9 @@ button:hover {
 #clock {
   font-size: 1.3rem;
   font-weight: bold;
-  color: rgba(20, 230, 200, 1);
-  background-color: transparent;
+  color: rgba(78, 81, 111, 1);
+  background-color: rgb(229, 230, 241);
+  border-radius: 4px;
 }
 
 #mpris {
@@ -155,7 +160,7 @@ button:hover {
 
 #battery {
   background-color: #ffffff;
-  color: #000000;
+  color: rgb(250, 250, 250);
 }
 
 #battery.charging,
@@ -167,7 +172,7 @@ button:hover {
 @keyframes blink {
   to {
     background-color: #ffffff;
-    color: #000000;
+    color: rgb(250, 250, 250);
   }
 }
 
@@ -198,21 +203,21 @@ button:hover {
 
 #power-profiles-daemon.power-saver {
   background-color: #2ecc71;
-  color: #000000;
+  color: rgb(250, 250, 250);
 }
 
 label:focus {
-  background-color: #000000;
+  background-color: rgb(250, 250, 250);
 }
 
 #cpu {
-  color: rgba(20, 230, 200, 1);
+  color: rgba(78, 81, 111, 1);
   background-color: rgb(6, 41, 1);
 }
 
 #memory {
-  color: rgba(20, 230, 200, 1);
-  background-color: rgb(41, 1, 3);
+  color: rgb(211, 212, 220);
+  background-color: rgb(59, 7, 219);
 }
 
 #disk {
@@ -224,7 +229,7 @@ label:focus {
 }
 
 #network {
-  background-color: #000000;
+  background-color: rgb(250, 250, 250);
 }
 
 #network.disconnected {
@@ -232,9 +237,9 @@ label:focus {
 }
 
 #pulseaudio {
-  background-color: rgb(61, 50, 2);
+  background-color: rgb(219, 166, 7);
   border-radius: 6px;
-  color: rgba(20, 230, 200, 1);
+  color: rgb(82, 78, 74);
 }
 
 #pulseaudio.muted {
@@ -244,7 +249,7 @@ label:focus {
 
 #wireplumber {
   background-color: #fff0f5;
-  color: #000000;
+  color: rgb(250, 250, 250);
 }
 
 #wireplumber.muted {
@@ -274,7 +279,7 @@ label:focus {
 }
 
 #custom-keymode.default {
-  background-color: rgba(20, 230, 200, 0.1);
+  background-color: rgba(78, 81, 111, 0.1);
   color: #ffffff;
 }
 
@@ -286,8 +291,9 @@ label:focus {
 #custom-current_layout {
   min-width: 60px;
   font-weight: bold;
-  padding: 0 10px;
-  border-radius: 0 10 10 0px;
+  padding: 0px 10px;
+  border-radius: 4px;
+  margin-left: 6px;
 }
 
 #custom-current_layout.scroller {
@@ -297,7 +303,7 @@ label:focus {
 
 menu {
   border-radius: 10px;
-  background-color: #000000;
+  background-color: rgb(250, 250, 250);
   color: #ffffff;
 }
 
@@ -307,7 +313,7 @@ menuitem {
 
 #custom-current_layout.monocle {
   background-color: #222;
-  color: rgba(20, 230, 200, 0.8);
+  color: rgba(78, 81, 111, 0.8);
 }
 
 #custom-current_layout.r_tile {
@@ -367,8 +373,8 @@ menuitem {
 }
 
 #idle_inhibitor {
-  background-color: #111;
-  color: rgba(20, 230, 200, 0.8);
+  color: rgb(250, 250, 250);
+  background-color: rgb(78, 81, 111);
 }
 
 #idle_inhibitor.activated {
@@ -379,9 +385,9 @@ menuitem {
 #mpd {
   font-size: 1rem;
   min-width: 400px;
-  background-color: rgba(10, 10, 10, 0.5);
-  color: rgba(20, 230, 200, 1);
-  border: 1px solid rgba(20, 230, 200, 1);
+  background-color: rgba(10, 10, 10, 0.8);
+  color: rgba(78, 81, 111, 1);
+  border: 1px solid rgba(78, 81, 111, 1);
   border-radius: 6px;
   padding: 0 5px;
   margin: 0 5px;
@@ -397,9 +403,9 @@ menuitem {
 }
 
 #mpd.paused {
-  background-color: transparent;
-  color: rgba(20, 230, 200, 0.2);
-  border: 1px solid rgba(20, 230, 200, 0.2);
+  background-color: rgba(78, 81, 111, 0.1);
+  color: rgba(78, 81, 111, 0.2);
+  border: 1px solid rgba(78, 81, 111, 0.2);
   border-radius: 6px;
   padding: 0 5px;
 }
@@ -414,7 +420,7 @@ menuitem {
 
 #keyboard-state {
   background: #97e1ad;
-  color: #000000;
+  color: rgb(250, 250, 250);
   padding: 0 0px;
   margin: 0 5px;
   min-width: 16px;
@@ -458,16 +464,16 @@ menuitem {
 }
 
 #custom-current_layout.dwindle {
-  background-color: #000000;
+  background-color: rgb(250, 250, 250);
   color: #bb96da;
 }
 
 #custom-current_layout.scrolling {
-  background-color: #000000;
-  color: rgba(20, 230, 200, 0.8);
+  background-color: rgb(250, 250, 250);
+  color: rgba(78, 81, 111, 0.8);
 }
 
 #custom-current_layout.master {
-  background-color: #000000;
-  color: #fab388;
+  background-color: rgb(250, 250, 250);
+  color: #524e4a;
 }

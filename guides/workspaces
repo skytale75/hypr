@@ -1,16 +1,6 @@
 s,  Set layout to scrolling
 d,  Set layout to dwindle
 m,  Set layout to master
-1,  View workspace 1
-2,  View workspace 2
-3,  View workspace 3
-4,  View workspace 4
-5,  View workspace 5
-6,  View workspace 6
-7,  View workspace 7
-8,  View workspace 8
-9,  View workspace 9
-0,  View workspace 10
 ,XF86Back,  Move to WS 1
 XF86Forward,  Move to WS 2
 Ctrl, minus,  Move to WS 3
