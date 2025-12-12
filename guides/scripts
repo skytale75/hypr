@@ -1,10 +1,10 @@
-b,  Update Bind List
-m,  reload mako
-i,  Info Files
-e,  Send Email
-p,  Stuff
-k,  kill mako
-l,  kill listeners
-s,  Restart submap listener
-SUPER, S, submap, reset
-escape, submap, reset
+b - Update Bind List
+m - reload mako
+i - Info Files
+e - Send Email
+p - Stuff
+k - kill mako
+l - kill listeners
+s - Restart submap listener
+SUPER -S, submap, reset
+escape -submap, reset

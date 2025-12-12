@@ -1,94 +1,94 @@
-XF86HomePage,  Follow mouse
-XF86ZoomIn,  Follow mouse
-SUPER SHIFT, SPACE,  Waybar Big
-SUPER SHIFT, P,  Password Manager
-SUPER, SPACE,  Waybar Small
-SUPER, Return, layoutmsg, swapwithmaster
-SUPER SHIFT, F, fullscreen
-SUPER SHIFT, Return,  Terminal
-SUPER, Q, killactive
-SUPER SHIFT, Q,  Exit Script
-SUPER, m,  menu
-SUPER, b,  wallpaper randomizer
-SUPER SHIFT, C, centerwindow
-SUPER, f, togglefloating
-SUPER, 1, workspace, 1
-SUPER, 2, workspace, 2
-SUPER, 3, workspace, 3
-SUPER, 4, workspace, 4
-SUPER, 5, workspace, 5
-SUPER, 6, workspace, 6
-SUPER, 7, workspace, 7
-SUPER, 8, workspace, 8
-SUPER, 9, workspace, 9
-SUPER, 0, workspace, 0
-SUPER, h, exec, best_keys.sh left
-SUPER, l, exec, best_keys.sh right
-SUPER SHIFT, k, exec, best_keys.sh mvup
-SUPER SHIFT, j, exec, best_keys.sh mvdown
-XF86Back, focusmonitor, 0
-XF86Forward, focusmonitor, 1
-SUPER, k, movefocus, u
-SUPER, j, movefocus, d
-SUPER Ctrl, l, layoutmsg, movewindowto r
-SUPER Ctrl, h, layoutmsg, movewindowto l
-SUPER Ctrl, k, layoutmsg, movewindowto u
-SUPER Ctrl, j, layoutmsg, movewindowto d
-SUPER SHIFT, l, exec, best_keys.sh mvright
-SUPER SHIFT, h, exec, best_keys.sh mvleft
-SUPER SHIFT Ctrl, b, exec, python3 /home/mike/.config/hypr/scripts/bind_csm.py
-SUPER Ctrl, b,  bind list
-SUPER, mouse_down, workspace, e+1
-SUPER, mouse_up, workspace, e-1
-SUPER, mouse:272, movewindow
-SUPER, mouse:273, resizewindow
-XF86AudioRaiseVolume,  Volume up 5%
-SHIFT, XF86AudioRaiseVolume,  Volume up 1%
-XF86AudioLowerVolume,  Volume down 5%
-SHIFT, XF86AudioLowerVolume,  Volume down 1%
-XF86AudioMute,  Volume mute
-XF86AudioMicMute,  Mic mute
-XF86MonBrightnessUp,  Brightness up 5%
-XF86MonBrightnessDown,  Brightness down 5%
-XF86AudioNext,  Next track
-XF86AudioPause,  Play/Pause
-XF86AudioPlay,  Play/Pause
-XF86AudioPrev,  Previous track
-print,  Screenshot
-SHIFT, print,  4 second Screenshot
-submap_name = line.split("=", 1)[1].strip()
+XF86HomePage - Follow mouse
+XF86ZoomIn - Follow mouse
+SUPER SHIFT -SPACE,  Waybar Big
+SUPER SHIFT -P,  Password Manager
+SUPER -SPACE,  Waybar Small
+SUPER -Return, layoutmsg, swapwithmaster
+SUPER SHIFT -F, fullscreen
+SUPER SHIFT -Return,  Terminal
+SUPER -Q, killactive
+SUPER SHIFT -Q,  Exit Script
+SUPER -m,  menu
+SUPER -b,  wallpaper randomizer
+SUPER SHIFT -C, centerwindow
+SUPER -f, togglefloating
+SUPER -1, workspace, 1
+SUPER -2, workspace, 2
+SUPER -3, workspace, 3
+SUPER -4, workspace, 4
+SUPER -5, workspace, 5
+SUPER -6, workspace, 6
+SUPER -7, workspace, 7
+SUPER -8, workspace, 8
+SUPER -9, workspace, 9
+SUPER -0, workspace, 0
+SUPER -h, exec, best_keys.sh left
+SUPER -l, exec, best_keys.sh right
+SUPER SHIFT -k, exec, best_keys.sh mvup
+SUPER SHIFT -j, exec, best_keys.sh mvdown
+XF86Back -focusmonitor, 0
+XF86Forward -focusmonitor, 1
+SUPER -k, movefocus, u
+SUPER -j, movefocus, d
+SUPER Ctrl -l, layoutmsg, movewindowto r
+SUPER Ctrl -h, layoutmsg, movewindowto l
+SUPER Ctrl -k, layoutmsg, movewindowto u
+SUPER Ctrl -j, layoutmsg, movewindowto d
+SUPER SHIFT -l, exec, best_keys.sh mvright
+SUPER SHIFT -h, exec, best_keys.sh mvleft
+SUPER SHIFT Ctrl -b, exec, python3 /home/mike/.config/hypr/scripts/bind_csm.py
+SUPER Ctrl -b,  bind list
+SUPER -mouse_down, workspace, e+1
+SUPER -mouse_up, workspace, e-1
+SUPER -mouse:272, movewindow
+SUPER -mouse:273, resizewindow
+XF86AudioRaiseVolume - Volume up 5%
+SHIFT -XF86AudioRaiseVolume,  Volume up 1%
+XF86AudioLowerVolume - Volume down 5%
+SHIFT -XF86AudioLowerVolume,  Volume down 1%
+XF86AudioMute - Volume mute
+XF86AudioMicMute - Mic mute
+XF86MonBrightnessUp - Brightness up 5%
+XF86MonBrightnessDown - Brightness down 5%
+XF86AudioNext - Next track
+XF86AudioPause - Play/Pause
+XF86AudioPlay - Play/Pause
+XF86AudioPrev - Previous track
+print - Screenshot
+SHIFT -print,  4 second Screenshot
+submap_name = line.split("=" -1)[1].strip()
 submap_notify() {
 submap_notify_mako() {
 submap*)makoctl dismiss && submap_notify_mako ;;
-KP_Page_Up, togglespecialworkspace, servers
-KP_Page_Up, exec, resize_center.sh 95% 95%
-KP_Page_Down, togglespecialworkspace, sti
-KP_Page_Down, exec, resize_center.sh 98% 95%
-XF86Tools, togglespecialworkspace, mpdClient
-XF86Tools, exec, resize_center.sh 95% 90%
-SUPER, XF86Tools, togglespecialworkspace, glavaWS
-XF86Mail, togglespecialworkspace, email
-XF86Mail, exec, resize_center.sh 95% 95%
-SUPER, e, togglespecialworkspace, my_yazi
-SUPER, e, exec, resize_center.sh 95% 92%
-SUPER SHIFT, e, togglespecialworkspace, fm
-SUPER SHIFT, e, exec, resize_center.sh 65% 65%
-XF86Calculator, togglespecialworkspace, notes
-XF86Calculator, focusmonitor, HDMI-A-1
-XF86Calculator, centerwindow
-XF86Calculator, moveactive, 635 20
-SUPER Ctrl, x, focusmonitor, HDMI-A-1
-SUPER Ctrl, x, togglespecialworkspace, my_copy
-SUPER Ctrl, x, exec, resize_center.sh 90% 95%
-KP_Up, togglespecialworkspace, term_util
-SHIFT, KP_Up, setfloating
-KP_Up, exec, resize_center.sh 98% 98%
-SHIFT, KP_Up, movetoworkspace, special:term_util
-SUPER SHIFT, U, togglespecialworkspace, updater
-SUPER, S, submap, scripts
-SUPER, P, submap, colorpick
-SUPER, C, submap, configs
-XF86Search, submap, workspaces
-SUPER, O, submap, opacity
-SUPER, A, submap, apps
-SUPER, R, submap, resize
+KP_Page_Up -togglespecialworkspace, servers
+KP_Page_Up -exec, resize_center.sh 95% 95%
+KP_Page_Down -togglespecialworkspace, sti
+KP_Page_Down -exec, resize_center.sh 98% 95%
+XF86Tools -togglespecialworkspace, mpdClient
+XF86Tools -exec, resize_center.sh 95% 90%
+SUPER -XF86Tools, togglespecialworkspace, glavaWS
+XF86Mail -togglespecialworkspace, email
+XF86Mail -exec, resize_center.sh 95% 95%
+SUPER -e, togglespecialworkspace, my_yazi
+SUPER -e, exec, resize_center.sh 95% 92%
+SUPER SHIFT -e, togglespecialworkspace, fm
+SUPER SHIFT -e, exec, resize_center.sh 65% 65%
+XF86Calculator -togglespecialworkspace, notes
+XF86Calculator -focusmonitor, HDMI-A-1
+XF86Calculator -centerwindow
+XF86Calculator -moveactive, 635 20
+SUPER Ctrl -x, focusmonitor, HDMI-A-1
+SUPER Ctrl -x, togglespecialworkspace, my_copy
+SUPER Ctrl -x, exec, resize_center.sh 90% 95%
+KP_Up -togglespecialworkspace, term_util
+SHIFT -KP_Up, setfloating
+KP_Up -exec, resize_center.sh 98% 98%
+SHIFT -KP_Up, movetoworkspace, special:term_util
+SUPER SHIFT -U, togglespecialworkspace, updater
+SUPER -S, submap, scripts
+SUPER -P, submap, colorpick
+SUPER -C, submap, configs
+XF86Search -submap, workspaces
+SUPER -o, submap, opacity
+SUPER -A, submap, apps
+SUPER -R, submap, resize

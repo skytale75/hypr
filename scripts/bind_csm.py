@@ -117,6 +117,7 @@ def search_files_for_strings(start_dir, target_strings):
                                 if not line.startswith("submap"):
                                     line = str(line.split(" =")[1])
                                 line = line.replace(" , ", "")
+                                line = line.replace(", ", " -", 1)
                                 line = line.replace("$mainMod", "SUPER")
                                 count += 1
                                 print(f"{line.strip()}")

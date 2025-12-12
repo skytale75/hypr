@@ -1,12 +1,12 @@
-0, setprop, active, alpha 1.0
-1, setprop, active, alpha 0.1
-2, setprop, active, alpha 0.2
-3, setprop, active, alpha 0.3
-4, setprop, active, alpha 0.4
-5, setprop, active, alpha 0.5
-6, setprop, active, alpha 0.6
-7, setprop, active, alpha 0.7
-8, setprop, active, alpha 0.8
-9, setprop, active, alpha 0.9
-o, submap, reset
-escape, submap, reset
+0 -setprop, active, alpha 1.0
+1 -setprop, active, alpha 0.1
+2 -setprop, active, alpha 0.2
+3 -setprop, active, alpha 0.3
+4 -setprop, active, alpha 0.4
+5 -setprop, active, alpha 0.5
+6 -setprop, active, alpha 0.6
+7 -setprop, active, alpha 0.7
+8 -setprop, active, alpha 0.8
+9 -setprop, active, alpha 0.9
+o -submap, reset
+escape -submap, reset
