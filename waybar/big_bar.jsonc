@@ -111,14 +111,14 @@
   },
   "hyprland/workspaces": {
     "format": "{name} {icon}",
-    "active-only": true,
+    "active-only": false,
     "show-special": true,
-    "persistent-workspaces": {
-      "HDMI-A-1": [1, 3, 5, 7, 9],
-    },
+    // "persistent-workspaces": {
+    //   "HDMI-A-1": [1, 3, 5, 7, 9],
+    // },
     "format-icons": {
       "1": "\uf015",
-      "2": "\uea85",
+      "3": "\uea85",
       "urgent": "",
       "active": "", // focused workspace on current monitor
       "visible": "", // focused workspace on other monitors

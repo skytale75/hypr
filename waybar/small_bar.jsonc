@@ -97,10 +97,10 @@
     "format": "{name} {icon}",
     "active-only": false,
     "show-special": true,
-    "persistent-workspaces": {
-      // "HDMI-A-1": [1, 3, 5, 7, 9],
-      "DVI-D-1": [2, 4, 6, 8, 10],
-    },
+    // "persistent-workspaces": {
+    //   // "HDMI-A-1": [1, 3, 5, 7, 9],
+    //   "DVI-D-1": [2, 4, 6, 8, 10],
+    // },
     "format-icons": {
       "2": "\uf015",
       "4": "\uea85",
