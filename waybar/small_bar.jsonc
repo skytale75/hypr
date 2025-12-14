@@ -4,7 +4,7 @@
   "layer": "top",
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["hyprland/window"],
-  "modules-right": ["pulseaudio", "memory", "tray"],
+  "modules-right": ["pulseaudio", "memory"],
 
   "clock": {
     "format-alt": "{:%Y-%m-%d}",

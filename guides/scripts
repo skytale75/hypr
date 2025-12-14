@@ -3,6 +3,7 @@ m - reload mako
 i - Info Files
 e - Send Email
 p - Stuff
+t - Stuff
 k - kill mako
 l - kill listeners
 s - Restart submap listener

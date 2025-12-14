@@ -1,27 +1,18 @@
 XF86HomePage - Follow mouse
-XF86ZoomIn - Follow mouse
-SUPER SHIFT -SPACE,  Waybar Big
+XF86HomePage - Follow mouse
+SUPER SHIFT -b,  Waybar Big
+SUPER -b,  Waybar Small
 SUPER SHIFT -P,  Password Manager
-SUPER -SPACE,  Waybar Small
 SUPER -Return, layoutmsg, swapwithmaster
 SUPER SHIFT -F, fullscreen
 SUPER SHIFT -Return,  Terminal
 SUPER -Q, killactive
-SUPER SHIFT -Q,  Exit Script
+SUPER Ctrl -Q,  Exit Script
+SUPER SHIFT -Q, exec, hyprshutdown
 SUPER -m,  menu
-SUPER -b,  wallpaper randomizer
+SUPER -w,  wallpaper randomizer
 SUPER SHIFT -C, centerwindow
 SUPER -f, togglefloating
-SUPER -1, workspace, 1
-SUPER -2, workspace, 2
-SUPER -3, workspace, 3
-SUPER -4, workspace, 4
-SUPER -5, workspace, 5
-SUPER -6, workspace, 6
-SUPER -7, workspace, 7
-SUPER -8, workspace, 8
-SUPER -9, workspace, 9
-SUPER -0, workspace, 0
 SUPER -h, exec, best_keys.sh left
 SUPER -l, exec, best_keys.sh right
 SUPER SHIFT -k, exec, best_keys.sh mvup
@@ -76,7 +67,7 @@ SUPER SHIFT -e, exec, resize_center.sh 65% 65%
 XF86Calculator -togglespecialworkspace, notes
 XF86Calculator -focusmonitor, HDMI-A-1
 XF86Calculator -centerwindow
-XF86Calculator -moveactive, 635 20
+XF86Calculator -moveactive, 675 0
 SUPER Ctrl -x, focusmonitor, HDMI-A-1
 SUPER Ctrl -x, togglespecialworkspace, my_copy
 SUPER Ctrl -x, exec, resize_center.sh 90% 95%
@@ -85,6 +76,7 @@ SHIFT -KP_Up, setfloating
 KP_Up -exec, resize_center.sh 98% 98%
 SHIFT -KP_Up, movetoworkspace, special:term_util
 SUPER SHIFT -U, togglespecialworkspace, updater
+SUPER -space, submap, go_to
 SUPER -S, submap, scripts
 SUPER -P, submap, colorpick
 SUPER -C, submap, configs
