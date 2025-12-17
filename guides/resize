@@ -1,17 +1,17 @@
-right -resizeactive, 10 0
-right -centerwindow
-left -resizeactive, -10 0
-left -centerwindow
-up -resizeactive, 0 -10
-up -centerwindow
-down -resizeactive, 0 10
-down -centerwindow
-l -resizeactive, 100 0
-l -centerwindow
-h -resizeactive, -100 0
-h -centerwindow
-k -resizeactive, 0 -100
-k -centerwindow
-j -resizeactive, 0 100
-j -centerwindow
-escape -submap, reset
+right + resizeactive: 10 0
+right: centerwindow
+left + resizeactive: -10 0
+left: centerwindow
+up + resizeactive: 0 -10
+up: centerwindow
+down + resizeactive: 0 10
+down: centerwindow
+l + resizeactive: 100 0
+l: centerwindow
+h + resizeactive: -100 0
+h: centerwindow
+k + resizeactive: 0 -100
+k: centerwindow
+j + resizeactive: 0 100
+j: centerwindow
+escape + submap: reset

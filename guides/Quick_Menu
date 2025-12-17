@@ -1,0 +1,31 @@
+
+Go to...( +shift to move )
+(h)ome
+(w)eb
+(k)rita
+(f)acebook
+(c)ode
+(m)usicm
+
+Layouts
+s:  Set layout to scrolling
+d:  Set layout to dwindle
+m:  Set layout to master
+
+Toggle bar
+1: left
+2: right
+
+Scrolling
+h:  Column Shrink
+l:  Column Grow
+Ctrl + f:  [F]it All
+a:  Re-[a]lign
+
+c: centerwindow
+XF86Back:  Move Monitor Left
+XF86Forward:  Move Monitor Right
+t: togglefloating
+r:  Reset View
+XF86Search + submap: reset
+escape + submap: reset

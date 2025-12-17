@@ -1,11 +1,13 @@
-b - bin folder
-d - dev folder
-h - hypr folder
-f - fish folder
-k - kitty folder
-m - mako file
-n - nvim folder
-SHIFT -n,  ncmpcpp folder
-w - waybar folder
-SUPER -C, submap, reset
-escape -submap, reset
+
+b:  bin folder
+d:  dev folder
+h:  hypr folder
+f:  fish folder
+k:  kitty folder
+m:  mako file
+n:  nvim folder
+t:  ncmpcpp folder
+w:  waybar folder
+
+SUPER + C: submap, reset
+escape + submap: reset

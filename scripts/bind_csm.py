@@ -70,9 +70,15 @@ def search_files_for_strings(start_dir, target_strings):
     # Use os.walk with topdown=True to prune directories (like .git)
     for root, dirs, files in os.walk(start_dir, topdown=True):
         # Exclude the '.git' directory from the current walk and further recursion
-        if ".git" in dirs:
-            dirs.remove(".git")
-
+        exclude = [".git", "scripts", "guides", "listeners", "waybar"]
+        for item in exclude:
+            if item in dirs:
+                dirs.remove(item)
+        # if ".git" in dirs:
+        #     dirs.remove(".git")
+        # if "scripts" in dirs:
+        #     dirs.remove("scripts")
+        #
         for file_name in files:
             if file_name == ".bind_list.txt":
                 continue
@@ -82,6 +88,18 @@ def search_files_for_strings(start_dir, target_strings):
             try:
                 with open(file_path, "r", encoding="utf-8") as f:
                     for line_num, line in enumerate(f, 1):
+                        if "#-d" in line:
+                            continue
+                        if "#-s" in line:
+                            parts = line.split("#-s", 1)
+                            text_after = parts[1].strip()
+                            if text_after:
+                                with open(my_list, "a") as f:
+                                    f.write(f"{text_after}\n")
+                            else:
+                                with open(my_list, "a") as f:
+                                    f.write("\n")
+                            continue
                         for target in target_strings:
                             if line.strip().startswith(target):
                                 # New logic to handle "exec" and "#->"
@@ -116,10 +134,18 @@ def search_files_for_strings(start_dir, target_strings):
 
                                 if not line.startswith("submap"):
                                     line = str(line.split(" =")[1])
-                                line = line.replace(" , ", "")
-                                line = line.replace(", ", " -", 1)
+
                                 line = line.replace("$mainMod", "SUPER")
-                                count += 1
+                                # if count > 1:
+                                line = line.replace(" , ", "")
+                                track = len(line.split(","))
+                                print(track)
+                                if track > 2:
+                                    line = line.replace(", ", " + ", 1)
+                                    line = line.replace(", ", ": ", 1)
+                                else:
+                                    line = line.replace(" , ", "")
+                                    line = line.replace(",", ":")
                                 print(f"{line.strip()}")
                                 with open(my_list, "a") as f:
                                     f.write(f"{line.strip()}\n")

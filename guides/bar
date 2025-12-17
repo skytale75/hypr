@@ -1,0 +1,9 @@
+
+b:  Toggle Waybar Big
+s:  Toggle Waybar Small
+k:  Kill Waybar
+r:  Restore Waybar
+x:  Restart Waybar
+SUPER + b: submap, reset
+escape + submap: reset
+catchall + submap: reset

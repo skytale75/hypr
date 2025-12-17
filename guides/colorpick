@@ -1,6 +1,6 @@
-n - Colorpick New list hex
-m - Colorpick New list rgb
-p - Colorpick Add to list hex
-r - Colorpick Add to list rgb
-s - Colorpick List
-escape -submap, reset
+n:  Colorpick New list hex
+m:  Colorpick New list rgb
+p:  Colorpick Add to list hex
+r:  Colorpick Add to list rgb
+s:  Colorpick List
+escape + submap: reset
