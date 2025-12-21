@@ -1,3 +1,4 @@
+Return:  Terminal
 
 Go to...( +shift to move )
 (h)ome
@@ -17,8 +18,8 @@ Toggle bar
 2: right
 
 Scrolling
-h:  Column Shrink
-l:  Column Grow
+left:  Column Shrink
+right:  Column Grow
 Ctrl + f:  [F]it All
 a:  Re-[a]lign
 

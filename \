@@ -73,7 +73,6 @@ submap = reset
 # NOTE: --------------------------------------------
 bind = $mainMod, Return, submap, Quick_Menu
 submap = Quick_Menu
-bind = , Return, exec, smc -n "new_term.sh" #-> Terminal
 #-s
 #-s Go to...( +shift to move )
 #-s (h)ome
@@ -156,7 +155,7 @@ submap = apps
 #-s
 bind = , q, exec, smc -n qutebrowser 								#-> 			qutebrowser
 bind = , f, exec, smc -n "qutebrowser www.facebook.com www.messenger.com"							#-> 			qutebrowser
-bind = SHIFT, f, exec, smc -n frog #-> frog
+bind = SHIFT, f, exec, smc -n frog
 bind = , g, exec, smc -n sleep 1 && glava 									#-> 			glava
 bind = , b, exec, smc -n google-chrome-stable 						#-> 			chrome
 bind = SHIFT, b, exec, smc -n "google-chrome-stable --incognito" 	#->	chrome incognito

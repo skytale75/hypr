@@ -1,14 +1,20 @@
+SUPER + b: submap, bar
+SUPER + S: submap, scripts
+SUPER + P: submap, colorpick
+SUPER + C: submap, configs
+SUPER + Return: submap, Quick_Menu
+SUPER + o: submap, opacity
+SUPER + A: submap, apps
+SUPER + R: submap, resize
 XF86HomePage:  Follow mouse
 XF86HomePage:  Follow mouse
 SUPER SHIFT + P:  Password Manager
 SUPER + Space: layoutmsg, swapwithmaster
 SUPER SHIFT + F: fullscreen
-SUPER SHIFT + Return:  Terminal
 SUPER + Q: killactive
 SUPER Ctrl + Q:  Exit Script
 SUPER SHIFT + Q: exec, hyprshutdown
-SUPER + m:  menu
-SUPER + w:  wallpaper randomizer
+Menu:  menu
 SUPER + f: togglefloating
 SUPER + h: exec, best_keys.sh left
 SUPER + l: exec, best_keys.sh right

@@ -1,6 +1,7 @@
 
 q:  			qutebrowser
 f:  			qutebrowser
+SHIFT + f:  frog
 g:  			glava
 b:  			chrome
 SHIFT + b: 	chrome incognito

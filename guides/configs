@@ -3,7 +3,7 @@ b:  bin folder
 d:  dev folder
 h:  hypr folder
 f:  fish folder
-k:  kitty folder
+k:  $terminal folder
 m:  mako file
 n:  nvim folder
 t:  ncmpcpp folder
