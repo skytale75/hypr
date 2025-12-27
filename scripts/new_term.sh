@@ -10,8 +10,8 @@
 #     tmux new-session -d -s "$SESSION_NAME"
 # fi
 #
-# # Open a new Kitty terminal and attach to the session
-# kitty -e tmux attach-session -t "$SESSION_NAME"
+# # Open a new ghostty terminal and attach to the session
+# ghostty -e tmux attach-session -t "$SESSION_NAME"
 
 SESSION_NAME="current"
 
@@ -19,9 +19,9 @@ SESSION_NAME="current"
 tmux has-session -t "$SESSION_NAME" 2>/dev/null
 
 if [ $? -eq 0 ]; then
-    # Session exists, attach to it in a new kitty window
-    kitty --single-instance -e tmux attach-session -t "$SESSION_NAME"
+    # Session exists, attach to it in a new ghostty window
+    ghostty -e tmux attach-session -t "$SESSION_NAME"
 else
     # No "current" session found, create a new one and attach to it
-    kitty --single-instance -e tmux new-session -s "$SESSION_NAME"
+    ghostty -e tmux new-session -s "$SESSION_NAME"
 fi

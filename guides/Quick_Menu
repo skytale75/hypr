@@ -7,15 +7,14 @@ Go to...( +shift to move )
 (f)acebook
 (c)ode
 (m)usicm
+1 - 10
 
 Layouts
-s:  Set layout to scrolling
-d:  Set layout to dwindle
-m:  Set layout to master
+Ctrl + s:  Set layout to scrolling
+Ctrl + d:  Set layout to dwindle
+Ctrl + m:  Set layout to master
 
 Toggle bar
-1: left
-2: right
 
 Scrolling
 left:  Column Shrink

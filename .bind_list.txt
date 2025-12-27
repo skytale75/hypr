@@ -8,7 +8,7 @@ SUPER + A: submap, apps
 SUPER + R: submap, resize
 XF86HomePage:  Follow mouse
 XF86HomePage:  Follow mouse
-SUPER SHIFT + P:  Password Manager
+SUPER Ctrl + P:  Password Manager
 SUPER + Space: layoutmsg, swapwithmaster
 SUPER SHIFT + F: fullscreen
 SUPER + Q: killactive

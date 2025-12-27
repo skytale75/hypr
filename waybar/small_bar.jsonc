@@ -4,7 +4,7 @@
   // "layer": "top",
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["hyprland/window"],
-  "modules-right": ["pulseaudio", "memory"],
+  "modules-right": ["pulseaudio", "pulseaudio/slider", "memory"],
 
   "clock": {
     "format-alt": "{:%Y-%m-%d}",
@@ -24,6 +24,11 @@
   },
   "memory": {
     "format": "{used} / {total}",
+  },
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal",
   },
   "mpd": {
     "format": "{stateIcon} {artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ ",

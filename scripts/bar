@@ -3,7 +3,7 @@
 FILE="/home/mike/.wb_status"
 
 toggle_bar() {
-    (pkill -f "$1" && sed -i "/$1/d" "$FILE") || (waybar -b "$1" -c ~/.config/hypr/waybar/"$1".jsonc -s ~/.config/hypr/waybar/style.css & echo "$1" >> "$FILE")
+    (pkill -f "$1" && sed -i "/$1/d" "$FILE") || (waybar -b "$1" -c ~/.config/hypr/waybar/"$1".jsonc -s ~/.config/hypr/waybar/style.css & grep -q "$1" "$FILE" || echo "$1" >> "$FILE")
 
 }
 
