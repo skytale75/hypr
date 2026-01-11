@@ -23,6 +23,8 @@ submap_notify_mako() {
     # makoctl dismiss $STATUS || NID=$(notify-send -p "First notification") && echo $NID > $STATUS
     #
     if [ "$SUBMAP" != "default" ]; then
+        CLOSE_ID=$(< ~/.config/hypr/listeners/submap_id.txt)
+        makoctl dismiss -n "$CLOSE_ID"
         # NOTIFICATION_ID=$(notify-send -p -t 0 "This notification will be closed by the script." "Hello there")
         echo "$SUBMAP" > mako_layout.txt
         makoctl mode -a "$SUBMAP"
@@ -32,8 +34,10 @@ submap_notify_mako() {
         CLOSE_ID=$(< ~/.config/hypr/listeners/submap_id.txt)
         makoctl dismiss -n "$CLOSE_ID"
         makoctl mode -r $(< mako_layout.txt)
+        makoctl mode -a default
     fi
 }
+
 
 
 handle() {

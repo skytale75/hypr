@@ -1,6 +1,7 @@
 import os
 import pathlib
 import subprocess
+import submap_updater
 
 my_list = os.path.expanduser("~/.config/hypr/.bind_list.txt")
 
@@ -38,6 +39,8 @@ def remove_all_files_from_directory(directory_path):
         return
 
     for filename in os.listdir(directory_path):
+        if filename == "main": # New: Skip deletion of "main" file
+            continue
         file_path = os.path.join(directory_path, filename)
         if os.path.isfile(file_path):
             try:
@@ -81,6 +84,8 @@ def search_files_for_strings(start_dir, target_strings):
         #
         for file_name in files:
             if file_name == ".bind_list.txt":
+                continue
+            if file_name == "main_submap.conf": # New: Skip this file entirely
                 continue
             file_path = os.path.join(root, file_name)
             # Try to open and read the file. Use a try-except block to handle
@@ -156,7 +161,7 @@ def search_files_for_strings(start_dir, target_strings):
                 pass
     print(count)
 
-
+print(my_list)
 def extract_and_remove_submaps():
     """
     breaks up the bind list for submap guides
@@ -179,7 +184,7 @@ def extract_and_remove_submaps():
     while i < len(lines):
         line = lines[i].strip()
         # A submap section starts with "submap = <name>" where name is not "reset"
-        if line.startswith("submap =") and "reset" not in line:
+        if line.startswith("submap =") and "reset" or "main" not in line:
             try:
                 submap_name = line.split("=", 1)[1].strip()
                 if not submap_name:
@@ -192,21 +197,22 @@ def extract_and_remove_submaps():
             # Found a start, now find the end "submap = reset"
             j = i + 1
             while j < len(lines):
-                if lines[j].strip() == "submap = reset":
+                if lines[j].strip() == "submap = reset" or lines[j].strip() == "submap = main":
                     # End of section found.
                     section_indices = range(i, j + 1)
                     section_content = lines[i + 1 : j]
 
-                    # Create the new file for the submap
-                    new_file_path = os.path.join(output_dir, submap_name)
-                    try:
-                        with open(new_file_path, "w") as f_out:
-                            f_out.writelines(section_content)
-                        print(f"Created submap file: {new_file_path}")
-                        # Mark these lines to be removed from the original file
-                        lines_to_remove.update(section_indices)
-                    except IOError as e:
-                        print(f"Error writing to {new_file_path}: {e}")
+                    if submap_name != "main": # Prevent writing for 'main' submap
+                        # Create the new file for the submap
+                        new_file_path = os.path.join(output_dir, submap_name)
+                        try:
+                            with open(new_file_path, "w") as f_out:
+                                f_out.writelines(section_content)
+                            print(f"Created submap file: {new_file_path}")
+                            # Mark these lines to be removed from the original file
+                            lines_to_remove.update(section_indices)
+                        except IOError as e:
+                            print(f"Error writing to {new_file_path}: {e}")
 
                     # Continue search after this section
                     i = j
@@ -227,6 +233,7 @@ def extract_and_remove_submaps():
 
 
 if __name__ == "__main__":
+    submap_updater.update_submap_config()
     search_directory = os.path.expanduser("~/.config/hypr/")
 
     search_terms = ["bind", "submap"]

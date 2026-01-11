@@ -1,5 +1,5 @@
-
+gb
 1 - 0 for various opacity
 
-o + submap: reset
-escape + submap: reset
+backspace = main menu
+esc = exit

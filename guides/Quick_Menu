@@ -3,18 +3,12 @@ Return:  Terminal
 Go to...( +shift to move )
 (h)ome
 (w)eb
+(e)mail
 (k)rita
 (f)acebook
 (c)ode
-(m)usicm
+(m)usic
 1 - 10
-
-Layouts
-Ctrl + s:  Set layout to scrolling
-Ctrl + d:  Set layout to dwindle
-Ctrl + m:  Set layout to master
-
-Toggle bar
 
 Scrolling
 left:  Column Shrink
@@ -23,9 +17,10 @@ Ctrl + f:  [F]it All
 a:  Re-[a]lign
 
 c: centerwindow
-XF86Back:  Move Monitor Left
-XF86Forward:  Move Monitor Right
+Back = Workspace to monitor left
+Forward = Workspace to monitor right
 t: togglefloating
 r:  Reset View
-XF86Search + submap: reset
-escape + submap: reset
+
+backspace = exit
+esc = exit

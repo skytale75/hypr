@@ -8,11 +8,10 @@ i:  Info Files
 e:  Send Email
 SHIFT + e:  Edit Email list
 p:  Stuff
-t:  Stuff
+t:  Tabs
 SHIFT + m:  Update Mirrors
-l:  kill listeners
-s:  Restart submap listener
+l:  kill listeners please
+Ctrl + s:  Restart submap listener
 
-Exit
-SUPER + S: submap, reset
-escape + submap: reset
+backspace = main menu
+esc = exit

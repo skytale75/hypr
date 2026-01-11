@@ -25,6 +25,7 @@
     "tooltip": false,
     "format": "{icon}",
     "start-activated": false,
+    "timeout": 15,
     "format-icons": {
       "activated": " ",
       "deactivated": " ",

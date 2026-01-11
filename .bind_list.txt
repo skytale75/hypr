@@ -1,20 +1,13 @@
-SUPER + b: submap, bar
-SUPER + S: submap, scripts
-SUPER + P: submap, colorpick
-SUPER + C: submap, configs
-SUPER + Return: submap, Quick_Menu
-SUPER + o: submap, opacity
-SUPER + A: submap, apps
-SUPER + R: submap, resize
 XF86HomePage:  Follow mouse
 XF86HomePage:  Follow mouse
-SUPER Ctrl + P:  Password Manager
+SUPER CTRL + P:  Password Manager
 SUPER + Space: layoutmsg, swapwithmaster
 SUPER SHIFT + F: fullscreen
+SUPER + w: exec, wp_random.sh
+SUPER + m:  men(u)
 SUPER + Q: killactive
-SUPER Ctrl + Q:  Exit Script
+SUPER CTRL + Q:  Exit Script
 SUPER SHIFT + Q: exec, hyprshutdown
-Menu:  menu
 SUPER + f: togglefloating
 SUPER + h: exec, best_keys.sh left
 SUPER + l: exec, best_keys.sh right
@@ -24,14 +17,14 @@ XF86Back + focusmonitor: 0
 XF86Forward + focusmonitor: 1
 SUPER + k: movefocus, u
 SUPER + j: movefocus, d
-SUPER Ctrl + l: layoutmsg, movewindowto r
-SUPER Ctrl + h: layoutmsg, movewindowto l
-SUPER Ctrl + k: layoutmsg, movewindowto u
-SUPER Ctrl + j: layoutmsg, movewindowto d
+SUPER CTRL + l: layoutmsg, movewindowto r
+SUPER CTRL + h: layoutmsg, movewindowto l
+SUPER CTRL + k: layoutmsg, movewindowto u
+SUPER CTRL + j: layoutmsg, movewindowto d
 SUPER SHIFT + l: exec, best_keys.sh mvright
 SUPER SHIFT + h: exec, best_keys.sh mvleft
-SUPER SHIFT Ctrl + b: exec, python3 /home/mike/.config/hypr/scripts/bind_csm.py
-SUPER Ctrl + b:  bind list
+SUPER SHIFT CTRL + b: exec, python3 /home/mike/.config/hypr/scripts/bind_csm.py
+SUPER CTRL + b:  bind list
 SUPER + mouse_down: workspace, e+1
 SUPER + mouse_up: workspace, e-1
 SUPER + mouse:272: movewindow
@@ -54,8 +47,6 @@ KP_Page_Up + togglespecialworkspace: ST_servers
 KP_Page_Up + exec: resize_center.sh 95% 95%
 KP_Page_Down + togglespecialworkspace: sti
 KP_Page_Down + exec: resize_center.sh 98% 95%
-XF86Tools + togglespecialworkspace: mpdClient
-XF86Tools + exec: resize_center.sh 95% 90%
 SUPER + XF86Tools: togglespecialworkspace, glavaWS
 XF86Mail + togglespecialworkspace: email
 XF86Mail + exec: resize_center.sh 95% 95%
@@ -65,8 +56,6 @@ SUPER SHIFT + e: togglespecialworkspace, fm
 SUPER SHIFT + e: exec, resize_center.sh 65% 65%
 XF86Calculator + togglespecialworkspace: notes
 XF86Calculator + focusmonitor: HDMI-A-1
-XF86Calculator: centerwindow
-XF86Calculator + moveactive: 675 0
 Ctrl + x: focusmonitor, HDMI-A-1
 Ctrl + x: togglespecialworkspace, my_copy
 Ctrl + x: exec, resize_center.sh 90% 95%
@@ -75,11 +64,13 @@ SHIFT + KP_Up: setfloating
 KP_Up + exec: resize_center.sh 98% 98%
 SHIFT + KP_Up: movetoworkspace, special:term_util
 SUPER SHIFT + U: togglespecialworkspace, updater
-SUPER + b: submap, bar
-SUPER + S: submap, scripts
-SUPER + P: submap, colorpick
-SUPER + C: submap, configs
+o + submap: opacity
+S + submap: scripts
+P + submap: colorpick
+L + submap: layouts
+R + submap: resize
+G + submap: google
+C + submap: configs
+A + submap: apps
 SUPER + Return: submap, Quick_Menu
-SUPER + o: submap, opacity
-SUPER + A: submap, apps
-SUPER + R: submap, resize
+SUPER + b: submap, bar

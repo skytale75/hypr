@@ -1,7 +1,7 @@
 
 q:  			qutebrowser
 f:  			qutebrowser
-SHIFT + f:  frog
+SHIFT + f: exec, smc -n frog
 g:  			glava
 b:  			chrome
 SHIFT + b: 	chrome incognito
@@ -9,5 +9,5 @@ i:  			inkscape
 k:  			krita
 y: 			youtube
 
-SUPER + A: submap, reset
+A + submap: main
 escape + submap: reset

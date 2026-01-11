@@ -5,5 +5,5 @@ function paru_update() {
     paru -Syu --noconfirm | tee -i ~/logs/paru.log
 }
 
-kitty --title "update" -e bash -c "figlet \"Updater\" && yay -Syu --noconfirm --logfile ~/logs/yay.log" &&
-kitty --title "update" -e bash -c "figlet \"Flatpak Updater\" && sudo flatpak update && echo done"
+ghostty --title=update -e bash -c "figlet \"Updater\" && yay -Syu --noconfirm --logfile ~/logs/yay.log" &&
+ghostty --title=update -e bash -c "figlet \"Flatpak Updater\" && sudo flatpak update && echo done"

@@ -9,5 +9,5 @@ n:  nvim folder
 t:  ncmpcpp folder
 w:  waybar folder
 
-SUPER + C: submap, reset
-escape + submap: reset
+backspace = main menu
+esc = exit

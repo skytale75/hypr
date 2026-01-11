@@ -2,7 +2,7 @@ b			- bin
 d	 		- dev
 h	 		- hyprland
 f	 		- fish
-k	 		- kitty
+k	 		- ghostty
 n 			- neovim
 Shift + n 		- ncmpcpp
 w 			- waybar

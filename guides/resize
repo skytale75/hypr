@@ -14,4 +14,6 @@ k + resizeactive: 0 -100
 k: centerwindow
 j + resizeactive: 0 100
 j: centerwindow
-escape + submap: reset
+
+backspace = main menu
+esc = exit
