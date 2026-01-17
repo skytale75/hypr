@@ -43,6 +43,8 @@ XF86AudioPlay:  Play/Pause
 XF86AudioPrev:  Previous track
 print:  Screenshot
 SHIFT + print:  4 second Screenshot
+SUPER + Return: submap, Quick_Menu
+SUPER + b: submap, bar
 KP_Page_Up + togglespecialworkspace: ST_servers
 KP_Page_Up + exec: resize_center.sh 95% 95%
 KP_Page_Down + togglespecialworkspace: sti
@@ -72,5 +74,3 @@ R + submap: resize
 G + submap: google
 C + submap: configs
 A + submap: apps
-SUPER + Return: submap, Quick_Menu
-SUPER + b: submap, bar

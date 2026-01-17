@@ -5,7 +5,7 @@ echo $LAYOUT
 right() {
     if [ "$LAYOUT" = "scrolling" ]; then
         hyprctl -- dispatch layoutmsg move +col
-    elif [ "$LAYOUT" = "master" ] || [ "$LAYOUT" = "dwindle" ]; then
+    elif [ "$LAYOUT" = "master" ]; then
         hyprctl dispatch movefocus r
     fi
 }
@@ -13,14 +13,14 @@ right() {
 left() {
     if [ "$LAYOUT" = "scrolling" ]; then
         hyprctl -- dispatch layoutmsg move -col
-    elif [ "$LAYOUT" = "master" ] || [ "$LAYOUT" = "dwindle" ]; then
+    elif [ "$LAYOUT" = "master" ]; then
         hyprctl dispatch movefocus l
     fi
 }
 move_right() {
     if [ "$LAYOUT" = "scrolling" ]; then
         hyprctl -- dispatch layoutmsg swapcol r
-    elif [ "$LAYOUT" = "master" ] || [ "$LAYOUT" = "dwindle" ]; then
+    elif [ "$LAYOUT" = "master" ]; then
         hyprctl dispatch movewindow r
     fi
 }
@@ -28,7 +28,7 @@ move_right() {
 move_left() {
     if [ "$LAYOUT" = "scrolling" ]; then
         hyprctl -- dispatch layoutmsg swapcol l
-    elif [ "$LAYOUT" = "master" ] || [ "$LAYOUT" = "dwindle" ]; then
+    elif [ "$LAYOUT" = "master" ]; then
         hyprctl dispatch movewindow l
     fi
 }
@@ -37,7 +37,7 @@ move_up() {
     if [ "$LAYOUT" = "scrolling" ]; then
         # hyprctl -- dispatch layoutmsg movewindowto u
         echo "scrolling"
-    elif [ "$LAYOUT" = "master" ] || [ "$LAYOUT" = "dwindle" ]; then
+    elif [ "$LAYOUT" = "master" ]; then
         hyprctl dispatch movewindow u
     fi
 }
@@ -45,7 +45,7 @@ move_up() {
 move_down() {
     if [ "$LAYOUT" = "scrolling" ]; then
         hyprctl -- dispatch layoutmsg movewindowto d
-    elif [ "$LAYOUT" = "master" ] || [ "$LAYOUT" = "dwindle" ]; then
+    elif [ "$LAYOUT" = "master" ]; then
         hyprctl dispatch movewindow d
     fi
 }
