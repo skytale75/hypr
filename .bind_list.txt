@@ -43,8 +43,14 @@ XF86AudioPlay:  Play/Pause
 XF86AudioPrev:  Previous track
 print:  Screenshot
 SHIFT + print:  4 second Screenshot
-SUPER + Return: submap, Quick_Menu
-SUPER + b: submap, bar
+o + submap: opacity
+S + submap: scripts
+P + submap: colorpick
+L + submap: layouts
+R + submap: resize
+G + submap: google
+C + submap: configs
+A + submap: apps
 KP_Page_Up + togglespecialworkspace: ST_servers
 KP_Page_Up + exec: resize_center.sh 95% 95%
 KP_Page_Down + togglespecialworkspace: sti
@@ -66,11 +72,5 @@ SHIFT + KP_Up: setfloating
 KP_Up + exec: resize_center.sh 98% 98%
 SHIFT + KP_Up: movetoworkspace, special:term_util
 SUPER SHIFT + U: togglespecialworkspace, updater
-o + submap: opacity
-S + submap: scripts
-P + submap: colorpick
-L + submap: layouts
-R + submap: resize
-G + submap: google
-C + submap: configs
-A + submap: apps
+SUPER + Return: submap, Quick_Menu
+SUPER + b: submap, bar

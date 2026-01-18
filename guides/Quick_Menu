@@ -1,4 +1,6 @@
 Return:  Terminal
+SHIFT + Return:  Terminal (no tmux)
+CTRL + Return:  Terminal (Floating)
 
 Go to...( +shift to move )
 (h)ome
