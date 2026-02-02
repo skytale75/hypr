@@ -3,6 +3,7 @@ b:  Update Bind List
 mako
 m:  reload mako
 k:  kill mako
+r + exec: smc -n "killall ironbar && ironbar || ironbar"
 
 i:  Info Files
 e:  Send Email

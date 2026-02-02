@@ -7,22 +7,22 @@ Go to...( +shift to move )
 (w)eb
 (e)mail
 (k)rita
-(f)acebook
 (c)ode
 (m)usic
-1 - 10
+Worspaces 1 - 10
 
 Scrolling
+o:  OCR
 left:  Column Shrink
 right:  Column Grow
 Ctrl + f:  [F]it All
 a:  Re-[a]lign
 
-c: centerwindow
-Back = Workspace to monitor left
-Forward = Workspace to monitor right
-t: togglefloating
-r:  Reset View
+(c)enter Window
+<- = Workspace to monitor left
+-> = Workspace to monitor right
+(f)loating Toggle
+(r)eset view
 
-backspace = exit
+backspace = main
 esc = exit

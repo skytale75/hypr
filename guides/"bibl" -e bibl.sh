@@ -1,0 +1,60 @@
+SUPER + h: exec, best_keys.sh left
+SUPER + l: exec, best_keys.sh right
+SUPER SHIFT + k: exec, best_keys.sh mvup
+SUPER SHIFT + j: exec, best_keys.sh mvdown
+XF86Back + focusmonitor: 0
+XF86Forward + focusmonitor: 1
+SUPER + k: movefocus, u
+SUPER + j: movefocus, d
+SUPER CTRL + l: layoutmsg, movewindowto r
+SUPER CTRL + h: layoutmsg, movewindowto l
+SUPER CTRL + k: layoutmsg, movewindowto u
+SUPER CTRL + j: layoutmsg, movewindowto d
+SUPER SHIFT + l: exec, best_keys.sh mvright
+SUPER SHIFT + h: exec, best_keys.sh mvleft
+SUPER SHIFT CTRL + b: exec, python3 /home/mike/.config/hypr/scripts/bind_csm.py
+SUPER CTRL + b:  bind list
+SUPER + mouse_down: workspace, e+1
+SUPER + mouse_up: workspace, e-1
+SUPER + mouse:272: movewindow
+SUPER + mouse:273: resizewindow
+XF86AudioRaiseVolume:  Volume up 5%
+SHIFT + XF86AudioRaiseVolume:  Volume up 1%
+XF86AudioLowerVolume:  Volume down 5%
+SHIFT + XF86AudioLowerVolume:  Volume down 1%
+XF86AudioMute:  Volume mute
+XF86AudioMicMute:  Mic mute
+XF86MonBrightnessUp:  Brightness up 5%
+XF86MonBrightnessDown:  Brightness down 5%
+XF86AudioNext:  Next track
+XF86AudioPause:  Play/Pause
+XF86AudioPlay:  Play/Pause
+XF86AudioPrev:  Previous track
+KP_Page_Up + togglespecialworkspace: ST_servers
+KP_Page_Up + exec: resize_center.sh 95% 95%
+KP_Page_Down + togglespecialworkspace: sti
+KP_Page_Down + exec: resize_center.sh 98% 95%
+SUPER + XF86Tools: togglespecialworkspace, glavaWS
+XF86Mail + togglespecialworkspace: email
+XF86Mail + exec: resize_center.sh 95% 95%
+SUPER + e: togglespecialworkspace, my_yazi
+SUPER + e: exec, resize_center.sh 95% 92%
+SUPER SHIFT + e: togglespecialworkspace, fm
+SUPER SHIFT + e: exec, resize_center.sh 65% 65%
+XF86Calculator + togglespecialworkspace: notes
+XF86Calculator + focusmonitor: HDMI-A-1
+Ctrl + x: focusmonitor, HDMI-A-1
+Ctrl + x: togglespecialworkspace, my_copy
+Ctrl + x: exec, resize_center.sh 90% 95%
+KP_Up + togglespecialworkspace: term_util
+SHIFT + KP_Up: setfloating
+KP_Up + exec: resize_center.sh 98% 98%
+SHIFT + KP_Up: movetoworkspace, special:term_util
+SUPER SHIFT + U: togglespecialworkspace, updater
+o + submap: opacity
+submap = opacity
+gb
+1 - 0 for various opacity
+
+backspace = main menu
+esc = exit

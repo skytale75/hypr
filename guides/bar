@@ -1,4 +1,5 @@
 
+i + exec: smc -n "killall ironbar && ironbar || ironbar"
 h:  Toggle Waybar Big
 l:  Toggle Waybar Small
 k:  Kill Waybar
